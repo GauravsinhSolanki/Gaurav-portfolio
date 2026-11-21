@@ -1,26 +1,31 @@
-import VisibleNavbar from './components/Navbar';
+import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import AboutMe from './components/AboutMe';
-import Skills from './components/Skills';
+import About from './components/About';
 import Experience from './components/Experience';
-import Projects from './components/Projects';
+import AiPipeline from './components/AiPipeline';
+import Work from './components/Work';
+import Tagline from './components/Tagline';
+import Skills from './components/Skills';
 import Education from './components/Education';
 import Contact from './components/Contact';
-import Testimonials from './components/Testimonials';
-
+import Footer from './components/Footer';
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gray-950 text-white">
-      <VisibleNavbar />
-      <Hero />
-      <AboutMe />
-      <Skills />
-      <Experience />
-      <Projects />
-      <Education />
-      <Testimonials />
-      <Contact />
-    </main>
+    <>
+      <Navbar />
+      <main id="main">
+        <Hero />
+        <About />
+        <Experience />
+        <AiPipeline />
+        <Work />
+        <Tagline />
+        <Skills />
+        <Education />
+        <Contact />
+      </main>
+      <Footer />
+    </>
   );
 }

@@ -1,72 +1,51 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-  ],
+import type { Config } from 'tailwindcss';
+
+const config: Config = {
+  content: ['./app/**/*.{js,ts,jsx,tsx,mdx}'],
   theme: {
     extend: {
-      // YOUR CUSTOM COLOR PALETTE
       colors: {
-        // Base colors from your palette
-        dark: {
-          primary: '#222831',    // Deep charcoal - main background
-          secondary: '#31363F',  // Dark slate - cards/sections
-          accent: '#76ABAE',     // Teal blue - primary accent
-          light: '#EEEEEE',      // Off-white - text
+        // Flat dark surfaces (no gradients). Values from the design system's dark palette.
+        base: '#181818',
+        surface: '#1F1F1F',
+        raised: '#272727',
+        line: '#313131',
+        'line-strong': '#3D3D3D',
+        ink: {
+          DEFAULT: '#F5F5F5',
+          2: '#A3A3A3',
+          3: '#8A8A8A',
         },
-        // Semantic aliases
-        background: {
-          DEFAULT: '#222831',
-          light: '#31363F',
-          lighter: '#3a404a',
+        accent: {
+          DEFAULT: '#58A6FF',
+          hover: '#7AB8FF',
+          ink: '#181818',
         },
-        text: {
-          DEFAULT: '#EEEEEE',
-          light: '#DDDDDD',
-          muted: '#AAAAAA',
-        },
-        primary: {
-          DEFAULT: '#76ABAE',
-          light: '#8abfc2',
-          dark: '#5d8a8d',
-        },
-        border: {
-          DEFAULT: '#3a404a',
-          light: '#4a505a',
-        }
-      },
-      // TYPOGRAPHY SCALE
-      fontSize: {
-        'display-lg': ['3.5rem', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
-        'display': ['2.5rem', { lineHeight: '1.2', letterSpacing: '-0.01em' }],
-        'xl': ['1.25rem', { lineHeight: '1.4' }],
-        'lg': ['1.125rem', { lineHeight: '1.5' }],
-        'base': ['1rem', { lineHeight: '1.6' }],
-        'sm': ['0.875rem', { lineHeight: '1.5' }],
-        'xs': ['0.75rem', { lineHeight: '1.4' }],
       },
       fontFamily: {
-        'sans': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
-        'mono': ['JetBrains Mono', 'monospace'],
+        sans: ['var(--font-geist-sans)', 'system-ui', 'sans-serif'],
+        mono: ['var(--font-geist-mono)', 'ui-monospace', 'monospace'],
       },
-      // Animation remains the same
-      animation: {
-        'fade-in': 'fadeIn 0.5s ease-out',
-        'slide-up': 'slideUp 0.3s ease-out',
+      transitionTimingFunction: {
+        out: 'cubic-bezier(0.22, 1, 0.36, 1)',
       },
       keyframes: {
-        fadeIn: {
+        rise: {
+          '0%': { opacity: '0', transform: 'translateY(24px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        fade: {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
         },
-        slideUp: {
-          '0%': { transform: 'translateY(10px)', opacity: '0' },
-          '100%': { transform: 'translateY(0)', opacity: '1' },
-        },
+      },
+      animation: {
+        rise: 'rise 500ms cubic-bezier(0.22, 1, 0.36, 1) both',
+        fade: 'fade 300ms cubic-bezier(0.22, 1, 0.36, 1) both',
       },
     },
   },
   plugins: [],
-}
+};
+
+export default config;
