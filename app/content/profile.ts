@@ -6,6 +6,7 @@ export const profile = {
   role: 'Full Stack Software Engineer',
   company: 'BrokerLift',
   location: 'Greater Toronto Area, Canada',
+  workMode: 'Work from home, available across Canada',
   siteUrl: 'https://gauravsolanki.vercel.app',
   headline:
     'Full Stack Software Engineer at BrokerLift | Shipping insurance SaaS through an AI product pipeline | React, TypeScript, Node.js, REST APIs, AWS',
@@ -35,7 +36,7 @@ export type Stat = { value: string; label: string };
 
 export const heroSpec: Stat[] = [
   { label: 'Role', value: 'Full Stack Software Engineer, BrokerLift' },
-  { label: 'Based in', value: 'Greater Toronto Area, Canada' },
+  { label: 'Based in', value: 'Greater Toronto Area, Canada. Work from home, available across Canada.' },
   { label: 'Stack', value: 'React, TypeScript, Node.js, REST APIs, AWS' },
   { label: 'Products', value: '8+ built, all live' },
   { label: 'Portals', value: '2 client portals, U.S. and Canada' },

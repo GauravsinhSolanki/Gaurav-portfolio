@@ -8,7 +8,7 @@ export default function Footer() {
         <div>
           <p className="title-3 text-ink">{profile.name}</p>
           <p className="caption-2 mt-1 text-ink-3">
-            © {new Date().getFullYear()} · {profile.role} · {profile.location}
+            © {new Date().getFullYear()} · {profile.role} · {profile.location} · Work from home
           </p>
         </div>
         <ul className="flex items-center gap-2" aria-label="Profiles">

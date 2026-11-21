@@ -13,7 +13,7 @@ export default function AiPipeline() {
       {/* Full width band: the headline fact at display size, the rest as a two column list beside it */}
       <Reveal className="mt-12">
         <div className="card grid gap-8 bg-raised p-6 sm:p-8 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-16 lg:p-12">
-          <div className="flex flex-col justify-between gap-8">
+          <div className="flex flex-col gap-8">
             <p className="figure text-7xl text-accent lg:text-8xl">{first.stat}</p>
             <div>
               <h3 className="heading-5 text-ink">{first.title}</h3>
