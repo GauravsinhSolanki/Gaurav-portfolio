@@ -8,9 +8,9 @@ export const profile = {
   location: 'Greater Toronto Area, Canada',
   siteUrl: 'https://gauravsolanki.vercel.app',
   headline:
-    'Full Stack Software Engineer at BrokerLift | Shipping insurance SaaS through an AI product pipeline | React, TypeScript, Python, FastAPI, AWS',
+    'Full Stack Software Engineer at BrokerLift | Shipping insurance SaaS through an AI product pipeline | React, TypeScript, Node.js, REST APIs, AWS',
   heroTitle: ['Shipping insurance SaaS', 'through an AI product pipeline.'],
-  stack: 'React, TypeScript, Python, FastAPI, AWS',
+  stack: 'React, TypeScript, Node.js, REST APIs, AWS',
   available: 'Open for opportunities',
   resumePath: '/resume.pdf',
   email: 'solankigbs11@gmail.com',
@@ -21,10 +21,10 @@ export const profile = {
 };
 
 export const about = {
-  lead: "In two years I've built 8 insurance products from scratch. 6 are live, and U.S. insurance consultants use them every working day.",
+  lead: "In two years I've built 8+ insurance products from scratch. All are live, and insurance consultants in the U.S. and Canada use them every working day.",
   paragraphs: [
     "I'm a full stack software engineer in Toronto. I joined BrokerLift as a co-op student, was hired full-time four months later, and today I lead delivery on client programs in the U.S. and Canada.",
-    'What I do: take a feature from the first requirements call to production, then stay with it after launch. React and TypeScript on the frontend, Python and FastAPI on the backend, MongoDB for data, AWS to run and monitor it.',
+    'What I do: take a feature from the first requirements call to production, then stay with it after launch. React and TypeScript on the frontend, Node.js and REST APIs on the backend, MongoDB for data, AWS to run and monitor it.',
     "Lately most of my work runs through our AI product pipeline. I was the first engineer to take a live, client-facing product through it end to end, I've contributed tested code to the pipeline itself, and I now train other developers to ship with it.",
   ],
   tagline:
@@ -33,20 +33,24 @@ export const about = {
 
 export type Stat = { value: string; label: string };
 
-export const heroStats: Stat[] = [
-  { value: '8', label: 'Products built' },
-  { value: '6', label: 'Live in production' },
-  { value: '<3 wk', label: 'Scratch to UAT' },
-  { value: '5', label: 'Developers trained' },
+export const heroSpec: Stat[] = [
+  { label: 'Role', value: 'Full Stack Software Engineer, BrokerLift' },
+  { label: 'Based in', value: 'Greater Toronto Area, Canada' },
+  { label: 'Stack', value: 'React, TypeScript, Node.js, REST APIs, AWS' },
+  { label: 'Products', value: '8+ built, all live' },
+  { label: 'Portals', value: '2 client portals, U.S. and Canada' },
+  { label: 'Delivery', value: 'Scratch to client testing in under 3 weeks' },
 ];
 
 export const impactStats: Stat[] = [
-  { value: '8', label: 'Products built' },
-  { value: '6', label: 'Products live' },
-  { value: '<3 wk', label: 'Scratch to UAT' },
+  { value: '8+', label: 'Products built, all live' },
+  { value: '2', label: 'Client portals, U.S. and Canada' },
+  { value: '<3 wk', label: 'Scratch to client testing' },
   { value: '30%', label: 'Faster policy setup' },
   { value: '40%', label: 'Faster incident resolution' },
   { value: '5', label: 'Developers trained' },
+  { value: '108', label: 'Tests added to the AI pipeline' },
+  { value: '7', label: 'Written reports' },
 ];
 
 export type Job = {
@@ -65,12 +69,12 @@ export const experience: Job[] = [
     location: 'Canada',
     bullets: [
       {
-        lead: '8 products built, 6 live:',
-        text: 'shipped full-stack insurance products from scratch with React, TypeScript, FastAPI, MongoDB and AWS, used daily by U.S. insurance consultants.',
+        lead: '8+ products built, all live:',
+        text: 'shipped full-stack insurance products from scratch with React, TypeScript, Node.js, REST APIs, MongoDB and AWS, used daily by insurance consultants in the U.S. and Canada.',
       },
       {
-        lead: 'Scratch to UAT in under 3 weeks:',
-        text: 'led delivery of a national insurance portal for a major Canadian brokerage, including Stripe payments, with a second product 2 days later.',
+        lead: 'Two client portals, one U.S. and one Canadian:',
+        text: 'built both from scratch. The Canadian portal went from scratch to client testing in under 3 weeks, including Stripe payments, with a second product 2 days later.',
       },
       {
         lead: 'First to ship through the AI pipeline:',
@@ -88,6 +92,10 @@ export const experience: Job[] = [
         lead: '5 developers trained:',
         text: 'onboarded 3 developers to shipping independently and now coach 2 more on the AI pipeline.',
       },
+      {
+        lead: 'Support beside delivery:',
+        text: 'ran weekly support, code review and release tickets for a second client program alongside the build work.',
+      },
     ],
   },
   {
@@ -97,7 +105,7 @@ export const experience: Job[] = [
     location: 'Canada',
     bullets: [
       {
-        text: 'Hired full-time in 4 months after shipping React and FastAPI modules that became the foundation for production features.',
+        text: 'Hired full-time in 4 months after shipping React and Node.js modules that became the foundation for production features.',
       },
     ],
   },
@@ -126,7 +134,8 @@ export const experience: Job[] = [
 export const aiSection = {
   title: 'AI-assisted engineering',
   intro:
-    "Most of my work now runs through BrokerLift's AI product pipeline. I use it to ship, and I improve it when it gets in the way.",
+    "Most of my work now runs through BrokerLift's AI product pipeline. I use it to ship, I improve it when it gets in the way, and a change ships only when its build matches the live product on forms, documents, wording and pricing.",
+  principle: 'Every change proven against the live product before it reaches QA.',
   note: 'This is about using and improving an AI product pipeline. I do not build or train models.',
   items: [
     {
@@ -150,6 +159,16 @@ export const aiSection = {
       text: 'Built renewals as a reusable pipeline component, covered by 60 new tests.',
     },
     {
+      stat: '7',
+      title: 'Written reports',
+      text: '7 written reports plus a running log of traps, so a problem found once is never paid for twice.',
+    },
+    {
+      stat: '1 file',
+      title: 'A written publishing route',
+      text: 'Built the publishing route and hand-over script every developer on the program ships through, from the pipeline to QA and client testing, without me in the loop. One file to follow, two checkpoints.',
+    },
+    {
       stat: '2',
       title: 'Developers trained on the pipeline',
       text: 'Train 2 developers on the AI pipeline.',
@@ -165,9 +184,9 @@ export type WorkItem = {
 
 export const work: WorkItem[] = [
   {
-    title: 'National insurance portal',
-    text: 'For a major Canadian brokerage. Led delivery from scratch to UAT in under 3 weeks, including Stripe payments, with a second product 2 days later.',
-    tags: ['React', 'TypeScript', 'FastAPI', 'Stripe', 'AWS'],
+    title: 'Two client portals, U.S. and Canada',
+    text: 'Built both from scratch. The Canadian portal went from scratch to client testing in under 3 weeks, including Stripe payments, with a second product 2 days later.',
+    tags: ['React', 'TypeScript', 'Node.js', 'Stripe', 'AWS'],
   },
   {
     title: 'First product through the AI pipeline',
@@ -177,7 +196,7 @@ export const work: WorkItem[] = [
   {
     title: 'Bundle Policies',
     text: "The company's first Bundle Policies feature. Policy setup is 30% faster.",
-    tags: ['React', 'FastAPI', 'MongoDB'],
+    tags: ['React', 'REST APIs', 'MongoDB'],
   },
   {
     title: 'Renewals pipeline component',
@@ -190,9 +209,9 @@ export const work: WorkItem[] = [
     tags: ['AWS CloudWatch', 'MongoDB'],
   },
   {
-    title: 'Co-op foundation modules',
-    text: 'React and FastAPI modules shipped as a co-op student that became the foundation for production features.',
-    tags: ['React', 'FastAPI'],
+    title: 'Developer publishing route',
+    text: 'The route and hand-over script every developer on the program ships through, from the pipeline to QA and client testing. One file to follow, two checkpoints.',
+    tags: ['AI product pipeline', 'Developer onboarding'],
   },
 ];
 
@@ -201,7 +220,7 @@ export type SkillGroup = { title: string; items: string[] };
 export const skills: SkillGroup[] = [
   { title: 'Languages', items: ['TypeScript', 'JavaScript', 'Python', 'SQL'] },
   { title: 'Frontend', items: ['React', 'Vue.js'] },
-  { title: 'Backend', items: ['FastAPI', 'REST APIs', 'Node.js', 'Stripe payments'] },
+  { title: 'Backend', items: ['Node.js', 'REST APIs', 'FastAPI', 'Stripe payments'] },
   { title: 'Data', items: ['MongoDB', 'MySQL', 'DynamoDB'] },
   { title: 'Cloud and DevOps', items: ['AWS (EC2, Lambda, CloudWatch)', 'Docker', 'CI/CD', 'Terraform'] },
   { title: 'Testing and tools', items: ['Cypress', 'JUnit', 'Jenkins', 'Jira'] },

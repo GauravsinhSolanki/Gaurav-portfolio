@@ -6,7 +6,7 @@ import { profile } from './content/profile';
 
 const title = `${profile.name} | ${profile.role}`;
 const description =
-  'Full Stack Software Engineer at BrokerLift shipping insurance SaaS through an AI product pipeline. React, TypeScript, Python, FastAPI, AWS. 8 insurance products built, 6 live.';
+  'Full Stack Software Engineer at BrokerLift shipping insurance SaaS through an AI product pipeline. React, TypeScript, Node.js, REST APIs, AWS. 8+ insurance products built, all live.';
 
 export const metadata: Metadata = {
   metadataBase: new URL(profile.siteUrl),
@@ -17,8 +17,8 @@ export const metadata: Metadata = {
     'full stack software engineer',
     'React',
     'TypeScript',
-    'Python',
-    'FastAPI',
+    'Node.js',
+    'REST APIs',
     'AWS',
     'insurance SaaS',
     'AI product pipeline',

@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { about } from '../content/profile';
+import { about, aiSection } from '../content/profile';
 
 const words = about.tagline.split(' ');
 
@@ -61,6 +61,7 @@ export default function Tagline() {
           </span>
         ))}
       </p>
+      <p className="figure caption-1 mt-8 max-w-[680px] text-ink-3">{aiSection.principle}</p>
     </section>
   );
 }

@@ -1,11 +1,11 @@
 import { ArrowRight, DownloadSimple, EnvelopeSimple, GithubLogo, LinkedinLogo } from '@phosphor-icons/react/dist/ssr';
-import { about, heroStats, profile } from '../content/profile';
+import { about, heroSpec, profile } from '../content/profile';
 import Reveal from './Reveal';
 
 export default function Hero() {
   return (
     <section id="top" className="container-x pb-16 pt-32 sm:pb-20 sm:pt-40 lg:pb-24 lg:pt-48" aria-labelledby="hero-title">
-      <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_360px] lg:items-end lg:gap-16">
+      <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_400px] lg:items-end lg:gap-16">
         <div className="max-w-[680px]">
           <Reveal>
             <p className="inline-flex items-center gap-2 rounded-full border border-line bg-surface py-1 pl-2 pr-3 caption-4 text-ink-2">
@@ -31,7 +31,6 @@ export default function Hero() {
 
           <Reveal delay={0.1}>
             <p className="lead mt-6 text-ink-2">{about.lead}</p>
-            <p className="figure caption-1 mt-4 text-ink-3">{profile.stack}</p>
           </Reveal>
 
           <Reveal delay={0.15}>
@@ -68,17 +67,17 @@ export default function Hero() {
           </Reveal>
         </div>
 
-        {/* Proof panel */}
-        <Reveal delay={0.2} className="lg:justify-self-end">
-          <dl className="card grid grid-cols-2 gap-px overflow-hidden bg-line p-0" aria-label="Key numbers">
-            {heroStats.map((stat) => (
-              <div key={stat.label} className="bg-surface p-6">
-                <dd className="figure text-4xl text-ink">{stat.value}</dd>
-                <dt className="caption-2 mt-2 text-ink-2">{stat.label}</dt>
+        {/* Spec sheet: label and value rows in monospace */}
+        <Reveal delay={0.2} className="lg:justify-self-end lg:w-full">
+          <dl className="border-t border-line" aria-label="At a glance">
+            {heroSpec.map((row) => (
+              <div key={row.label} className="grid grid-cols-[96px_minmax(0,1fr)] gap-4 border-b border-line py-3">
+                <dt className="figure caption-4 uppercase tracking-wide text-ink-3">{row.label}</dt>
+                <dd className="body-5 text-ink">{row.value}</dd>
               </div>
             ))}
           </dl>
-          <p className="caption-5 mt-3 text-ink-3">Two years at BrokerLift. Numbers as of {new Date().getFullYear()}.</p>
+          <p className="figure caption-5 mt-3 text-ink-3">Record as of {new Date().getFullYear()}</p>
         </Reveal>
       </div>
     </section>
