@@ -17,8 +17,8 @@ const config: Config = {
           3: '#8A8A8A',
         },
         accent: {
-          DEFAULT: '#F0B347',
-          hover: '#F6C566',
+          DEFAULT: '#F7CD6E',
+          hover: '#FBDC94',
           ink: '#181818',
         },
       },

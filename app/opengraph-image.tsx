@@ -33,7 +33,7 @@ export default async function OpenGraphImage() {
         }}
       >
         <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
-          <div style={{ display: 'flex', fontSize: 24, color: '#F0B347', fontWeight: 600 }}>
+          <div style={{ display: 'flex', fontSize: 24, color: '#F7CD6E', fontWeight: 600 }}>
             {profile.name} · {profile.role} at {profile.company}
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', fontSize: 72, lineHeight: 1.05, fontWeight: 600, letterSpacing: -2 }}>
@@ -49,7 +49,7 @@ export default async function OpenGraphImage() {
             ['<3 wk', 'Scratch to client testing'],
           ].map(([value, label]) => (
             <div key={label} style={{ display: 'flex', flexDirection: 'column' }}>
-              <span style={{ fontSize: 56, fontWeight: 600, color: '#F0B347' }}>{value}</span>
+              <span style={{ fontSize: 56, fontWeight: 600, color: '#F7CD6E' }}>{value}</span>
               <span style={{ fontSize: 22, color: '#A3A3A3' }}>{label}</span>
             </div>
           ))}

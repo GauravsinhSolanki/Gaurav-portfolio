@@ -9,9 +9,12 @@ export default function About() {
       <div className="grid gap-10 lg:grid-cols-[280px_minmax(0,1fr)] lg:gap-16">
         <Reveal>
           <SectionHeading id="about-title" eyebrow="About" title="From the first requirements call to production." />
-          <p className="caption-1 mt-6 inline-flex items-center gap-2 text-ink-2">
-            <MapPin size={16} aria-hidden="true" className="text-accent" />
-            {profile.location}
+          <p className="caption-1 mt-6 flex items-start gap-2 text-ink-2">
+            <MapPin size={16} aria-hidden="true" className="mt-0.5 shrink-0 text-accent" />
+            <span>
+              {profile.location}
+              <span className="caption-2 block text-ink-3">{profile.workMode}</span>
+            </span>
           </p>
         </Reveal>
         <Reveal delay={0.1} className="max-w-[680px]">
