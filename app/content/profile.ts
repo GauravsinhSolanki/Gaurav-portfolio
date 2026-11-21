@@ -13,7 +13,7 @@ export const profile = {
   heroTitle: ['Shipping insurance SaaS', 'through an AI product pipeline.'],
   stack: 'React, TypeScript, Node.js, REST APIs, AWS',
   available: 'Open for opportunities',
-  resumePath: '/resume.pdf',
+  resumePath: '/Gaurav_Solanki_Resume.pdf',
   email: 'solankigbs11@gmail.com',
   linkedin: 'https://www.linkedin.com/in/gauravsinh-solanki/',
   linkedinHandle: 'gauravsinh-solanki',

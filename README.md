@@ -19,4 +19,4 @@ Open http://localhost:3000.
 - `app/components/` holds one component per section.
 - `app/globals.css` defines the named text styles (`heading-1` to `caption-5`), buttons, cards and form fields.
 - `app/opengraph-image.tsx` renders the social preview image at build time.
-- `public/resume.pdf` is the file the "Download resume" button links to. Add the PDF there.
+- `public/Gaurav_Solanki_Resume.pdf` is the file the "Download resume" button serves. Its source is `resume/Gaurav_Solanki_Resume.tex`.
